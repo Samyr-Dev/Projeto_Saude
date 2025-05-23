@@ -1,6 +1,8 @@
 package com.example.Projeto.Saude.service;
 
 import com.example.Projeto.Saude.entity.Paciente;
+import org.springframework.http.ResponseEntity;
+
 import java.util.List;
 
 public interface IPacienteService {
@@ -11,9 +13,9 @@ public interface IPacienteService {
 
     Paciente salvar(Paciente paciente);
 
-    void atualizar(Paciente paciente);
+    ResponseEntity<?> atualizar(Paciente paciente);
 
-    void excluir(Long id);
+    ResponseEntity<?> excluir(Long id);
 }
 
 

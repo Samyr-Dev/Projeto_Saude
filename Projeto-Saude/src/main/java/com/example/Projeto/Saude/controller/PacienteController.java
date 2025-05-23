@@ -1,8 +1,4 @@
 package com.example.Projeto.Saude.controller;
-
-
-
-
 import com.example.Projeto.Saude.entity.Paciente;
 import com.example.Projeto.Saude.service.PacienteService;
 import lombok.extern.slf4j.Slf4j;
@@ -56,17 +52,13 @@ public class PacienteController {
     @PutMapping()
     public ResponseEntity<?> update(@RequestBody com.example.Projeto.Saude.entity.Paciente paciente){
 
-        com.example.Projeto.Saude.entity.Paciente response = pacienteService.buscarPorId(paciente.getId());
-        if (response == null) {
-            return ResponseEntity.notFound().build();
-        }
-        pacienteService.atualizar(paciente);
-        return ResponseEntity.ok(null);
+        return pacienteService.atualizar(paciente);
+
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
-        com.example.Projeto.Saude.entity.Paciente response = pacienteService.buscarPorId(id);
+        Paciente response = pacienteService.buscarPorId(id);
         if (response == null) {
             return ResponseEntity.notFound().build();
         }

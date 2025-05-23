@@ -1,6 +1,5 @@
 package com.example.Projeto.Saude.entity;
 
-
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +11,6 @@ import java.time.LocalDate;
 
 @Data
 @Entity
-
-
 
 public class Paciente {
 
@@ -52,6 +49,5 @@ public class Paciente {
                 ", ativo" + ativo +
                 '}';
     }
-
 
 }

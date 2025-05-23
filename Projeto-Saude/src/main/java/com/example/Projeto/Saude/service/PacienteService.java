@@ -40,14 +40,35 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void atualizar(Paciente paciente) {
+    public ResponseEntity<?> atualizar(Paciente paciente) {
         log.info("atualizar() - paciente:{}", paciente );
+
+        Paciente original = buscarPorId(paciente.getId());
+        if (original == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        original.setNome(paciente.getNome());
+
         pacienteRepository.save(paciente);
+
+        return ResponseEntity.ok(null);
     }
 
     @Override
-    public void excluir(Long id) {
+    public ResponseEntity<?> excluir(Long id) {
+
+
+        Paciente original = buscarPorId(id);
+        if (original == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        original.setNome(original.getNome());
+
         pacienteRepository.deleteById(id);
+
+        return ResponseEntity.ok(null);
     }
 
     public void desativar(Paciente paciente) {
