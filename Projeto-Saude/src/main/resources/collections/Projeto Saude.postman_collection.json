@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "f9c88823-11c8-4ec8-951f-37497341c3ac",
+		"name": "Projeto Saude",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43094967"
+	},
+	"item": [
+		{
+			"name": "Requisições PS",
+			"item": []
+		},
+		{
+			"name": "Paciente-Busca",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-BuscaID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-BuscaNome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente/nome/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						"nome",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-salvar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-alterar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-deletarPorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paciente-InactivePorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paciente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
